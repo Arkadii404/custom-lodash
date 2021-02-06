@@ -19,6 +19,10 @@ export class Lodash {
     }
     return outArray;
   }
+
+  compact(array = []) {
+    return Array.isArray(array) ? array.filter((i) => i) : [];
+  }
 }
 
 export default Lodash;
