@@ -29,6 +29,16 @@ export class Lodash {
       return acc.concat(i);
     }, []);
   }
+
+  difference(array = [], values = []) {
+    if (!Array.isArray(array) || !Array.isArray(values)) {
+      return array;
+    }
+    for (let i of values) {
+      array = array.filter((j) => j !== i);
+    }
+    return array;
+  }
 }
 
 export default Lodash;
