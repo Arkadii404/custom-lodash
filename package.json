@@ -4,9 +4,13 @@
   "description": "",
   "main": "custom-lodash.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "nodemon test.js"
   },
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {},
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
