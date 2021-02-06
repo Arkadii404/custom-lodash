@@ -23,6 +23,12 @@ export class Lodash {
   compact(array = []) {
     return Array.isArray(array) ? array.filter((i) => i) : [];
   }
+
+  concat(...args) {
+    return args.reduce((acc, i) => {
+      return acc.concat(i);
+    }, []);
+  }
 }
 
 export default Lodash;
