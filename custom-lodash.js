@@ -49,6 +49,10 @@ export class Lodash {
     }
     return array;
   }
+
+  drop(array, n = 1) {
+    return Array.isArray(array) ? array.slice(n) : [];
+  }
 }
 
 export default Lodash;
