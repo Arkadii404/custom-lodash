@@ -39,6 +39,16 @@ export class Lodash {
     }
     return array;
   }
+
+  differenceBy(array = [], values = [], func) {
+    if (!Array.isArray(array) || !Array.isArray(values)) {
+      return array;
+    }
+    for (let i of values) {
+      array = array.filter((j) => func(j) !== func(i));
+    }
+    return array;
+  }
 }
 
 export default Lodash;
