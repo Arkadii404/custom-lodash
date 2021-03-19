@@ -1,4 +1,4 @@
-export class Lodash {
+export const _ = {
   chunk(array = [], size = 1) {
     const outArray = [];
     if (
@@ -18,17 +18,17 @@ export class Lodash {
       }
     }
     return outArray;
-  }
+  },
 
   compact(array = []) {
     return Array.isArray(array) ? array.filter((i) => i) : [];
-  }
+  },
 
   concat(...args) {
     return args.reduce((acc, i) => {
       return acc.concat(i);
     }, []);
-  }
+  },
 
   difference(array = [], values = []) {
     if (!Array.isArray(array) || !Array.isArray(values)) {
@@ -38,7 +38,7 @@ export class Lodash {
       array = array.filter((j) => j !== i);
     }
     return array;
-  }
+  },
 
   differenceBy(array = [], values = [], func) {
     if (!Array.isArray(array) || !Array.isArray(values)) {
@@ -48,11 +48,11 @@ export class Lodash {
       array = array.filter((j) => func(j) !== func(i));
     }
     return array;
-  }
+  },
 
   drop(array, n = 1) {
     return Array.isArray(array) ? array.slice(n) : [];
-  }
-}
+  },
+};
 
-export default Lodash;
+export default _;
