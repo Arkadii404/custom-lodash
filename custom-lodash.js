@@ -53,6 +53,12 @@ export const _ = {
   drop(array, n = 1) {
     return Array.isArray(array) ? array.slice(n) : [];
   },
+
+  fill(array, value, start = 0, end = array.length) {
+    return array.map((val, i) => {
+      return i >= start && i < end ? value : val;
+    });
+  },
 };
 
 export default _;
